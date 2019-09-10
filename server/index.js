@@ -8,8 +8,14 @@ const hbs = require('hbs');
 const app = express()
 
 // Habilitar hbs
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+// Añadir las vistas
+app.set('views', path.join(__dirname, './views'));
+
+// Cargar carpeta estatica 'public'
+app.use(express.static('public'))
+
 
 // Cargar rutas
 app.use('/', routes())
