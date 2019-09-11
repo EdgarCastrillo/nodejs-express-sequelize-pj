@@ -6,3 +6,13 @@ block contenido
         img(src=`/img/destinos_${viaje.imagen}_ln.jpg`, class="img-fluid")
       .col-md-7
         h1 #{viaje.titulo}
+        p 
+          i.fas.fa-calendar-alt
+          | Fecha ida: #{viaje.fecha_ida} – #{viaje.fecha_vuelta}
+        p 
+          i.fas.fa-dollar-sign
+          | Fecha vuelta: #{viaje.precio}
+        p 
+          i.fas.fa-users
+          | #{viaje.disponibles}
+        p= viaje.descripcion
