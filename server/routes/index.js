@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
 
+const Viaje = require('../models/Viajes')
 
 module.exports = function() {
   
@@ -12,6 +13,15 @@ module.exports = function() {
     res.render('nosotros', {
       pagina: 'Sobre nosotros'
     })
+  })
+  
+  router.get('/viajes', (req, res) => {
+    Viaje.findAll()
+      .then(viajes => res.render('viajes', {
+        pagina: 'Próximos Viajes',
+        viajes: viajes
+      }))
+      .catch(error => console.log(error))
   })
 
   return router
