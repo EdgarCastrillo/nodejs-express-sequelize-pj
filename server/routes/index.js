@@ -7,7 +7,15 @@ const Testimonial = require('../models/Testimoniales')
 module.exports = function() {
   
   router.get('/', (req, res) => {
-    res.render('index')
+    Viaje.findAll({
+      limit: 3
+    })
+      .then(viajes => res.render('index', {
+        pagina: 'Próximos Viajes',
+        clase: 'home',
+        viajes: viajes
+      }))
+      .catch(error => console.log(error)) 
   })
 
   router.get('/nosotros', (req, res) => {
