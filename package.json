@@ -4,7 +4,8 @@
   "description": "Node Js y Sequelize",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server"
+    "dev": "nodemon server",
+    "start": "node server"
   },
   "author": "Edgar Castrillo",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "nodemon": "^1.19.2",
     "pug": "^2.0.4",
     "sequelize": "^5.18.4"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0"
   }
 }
