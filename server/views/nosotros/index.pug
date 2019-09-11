@@ -1,3 +1,26 @@
 extends ../layout/index
 block contenido
-  h1= pagina
+  main.container.mt-5
+    .row
+      .col-md-5
+        img(src="img/nosotros.jpg", alt="Imagene de nosotros" class="img-fluid")
+      .col-md-7
+        h1 #{pagina}
+        blockquote Nulla iaculis, purus non viverra tristique, augue risus vestibulum magna, ut aliquam odio ex ac erat. Proin bibendum porttitor metus, et pharetra elit.
+        p Nulla iaculis, purus non viverra tristique, augue risus vestibulum magna, ut aliquam odio ex ac erat. Proin bibendum porttitor metus, et pharetra elit. Nulla iaculis, purus non viverra tristique, augue risus vestibulum magna, ut aliquam odio ex ac erat. Proin bibendum porttitor metus, et pharetra elit.
+        p Nulla iaculis, purus non viverra tristique, augue risus vestibulum magna, ut aliquam odio ex ac erat. Proin bibendum porttitor metus, et pharetra elit.
+  .listado-iconos
+    .container.mt-5.py-5.text-center
+      .row
+        .col-md-4
+          img(src="img/icono_seguridad.svg", class="img-fluid mb-4")
+          h2.mb-4 Seguridad
+          P Nulla iaculis, purus non viverra tristique, augue risus vestibulum magna, ut aliquam odio ex ac erat. Proin bibendum porttitor metus, et pharetra elit.
+        .col-md-4
+          img(src="img/icono_destinos.svg", class="img-fluid mb-4")
+          h2.mb-4 Mejores destinos
+          P Nulla iaculis, purus non viverra tristique, augue risus vestibulum magna, ut aliquam odio ex ac erat. Proin bibendum porttitor metus, et pharetra elit.
+        .col-md-4
+          img(src="img/icono_precios.svg", class="img-fluid mb-4")
+          h2.mb-4 Mejor Precio
+          P Nulla iaculis, purus non viverra tristique, augue risus vestibulum magna, ut aliquam odio ex ac erat. Proin bibendum porttitor metus, et pharetra elit.
